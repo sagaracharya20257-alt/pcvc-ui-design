@@ -9,9 +9,9 @@ export default function Button({
   const baseClasses = "font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
-    primary: "bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
-    outline: "border-2 border-red-600 text-red-600 hover:bg-red-50 focus:ring-red-500",
-    secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500"
+    primary: "w-[342px] h-[40px] flex items-center justify-center bg-red-600 text-white hover:bg-red-700 focus:ring-red-500",
+    outline: "w-[320px] h-[40px] flex items-center justify-center bg-white border border-[#ED1C24] text-[#ED1C24] rounded-lg px-4 py-1.5 focus:ring-[#ED1C24]",
+    secondary: "w-[320px] h-[40px] flex items-center justify-center bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500"
   };
   
   const sizes = {

@@ -1,7 +1,7 @@
 export default function AppLayout({ children }) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-md mx-auto bg-white min-h-screen shadow-lg">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="w-[390px] h-[844px] bg-gradient-to-b from-white to-white shadow-lg">
         {children}
       </div>
     </div>

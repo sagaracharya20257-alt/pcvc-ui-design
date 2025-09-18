@@ -31,7 +31,7 @@ export default function DateVerificationModal({ isOpen, onClose, onVerify }) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Verify Yourself">
       <div className="space-y-4">
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-600 text-md">
           Please Enter Date of Birth to Proceed Further
         </p>
         
