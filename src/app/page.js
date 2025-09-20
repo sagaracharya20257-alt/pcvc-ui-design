@@ -3,7 +3,7 @@
 import AppLayout from "../components/Layout/AppLayout";
 import WelcomeScreen from "../components/Welcome/WelcomeScreen";
 import DateVerificationModal from "../components/Verification/DateVerificationModal";
-import DashboardScreen from "../components/Dashboard/DashboardScreen";
+import DashboardScreen from "./Dashboard/page";
 import useAppFlow from "../hooks/useAppFlow";
 
 export default function Page() {
