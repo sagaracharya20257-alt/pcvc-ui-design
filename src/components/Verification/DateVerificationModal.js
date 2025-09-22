@@ -24,6 +24,8 @@ export default function DateVerificationModal({ isOpen, onClose, onVerify }) {
           placeholder="DD/MM/YYYY"
           value="DD/MM/YYYY"
           disabled
+          className="text-gray-400"
+          style={{ borderColor: '#C9D3E9', borderRadius: '8px' }}
         />
 
         <Button

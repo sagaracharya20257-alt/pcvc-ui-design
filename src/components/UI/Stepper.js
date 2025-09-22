@@ -1,26 +1,61 @@
 export default function Stepper({ steps, activeStep }) {
   return (
-    <div className="flex items-center justify-between border border-yellow-400 rounded-lg px-4 py-2 bg-white">
+    <div 
+      className="flex items-center bg-white rounded-lg overflow-hidden p-0"
+      style={{
+        width: '475px',
+        height: '60px'
+      }}
+    >
       {steps.map((step, index) => {
         const isActive = index === activeStep;
+        const isCompleted = index < activeStep;
+        
         return (
           <div key={index} className="flex items-center">
             <div
-              className={`w-6 h-6 flex items-center justify-center rounded-full border-2 ${
-                isActive ? "border-red-500 text-red-500" : "border-gray-400 text-gray-400"
+              className="rounded-full flex-shrink-0 border-3 border-solid bg-white"
+              style={{
+                width: '25px',
+                height: '25px',
+                borderColor: isActive 
+                  ? '#ED1C24' 
+                  : isCompleted
+                  ? '#22C55E'
+                  : '#A4B6DA'
+              }}
+            />        
+            <div
+              className={`ml-2 text-xs font-medium leading-tight flex flex-col justify-center ${
+                isActive
+                  ? "text-red-500"
+                  : isCompleted
+                  ? "text-green-600"
+                  : "text-gray-600"
               }`}
+              style={{
+                fontWeight: 500,
+                fontSize: '12px',
+                lineHeight: '16px',
+                minWidth: '45px',
+                height: '40px'
+              }}
             >
-              {isActive ? "●" : "○"}
+              {step.split(' ').map((word, wordIndex) => (
+                <div key={wordIndex}>{word}</div>
+              ))}
             </div>
-            <span
-              className={`ml-2 text-sm font-medium ${
-                isActive ? "text-red-500" : "text-gray-500"
-              }`}
-            >
-              {step}
-            </span>
             {index < steps.length - 1 && (
-              <div className="mx-2 w-8 h-px bg-gray-300"></div>
+              <div 
+                className={`mx-2 ${
+                  isCompleted ? "bg-green-500" : "bg-gray-300"
+                }`}
+                style={{
+                  width: '16.7px',
+                  height: '1px',
+                  borderColor: isCompleted ? '#22C55E' : '#000000'
+                }}
+              />
             )}
           </div>
         );

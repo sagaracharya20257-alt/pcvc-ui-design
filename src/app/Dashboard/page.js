@@ -3,6 +3,7 @@ import Card from "../../components/UI/Card";
 import Stepper from "../../components/UI/Stepper";
 import Button from "../../components/UI/Button";
 import Badge from "../../components/UI/Badge";
+import Dropdown from "../../components/UI/Dropdown";
 
 export default function DashboardScreen() {
     return (
@@ -14,11 +15,7 @@ export default function DashboardScreen() {
                         alt="HDFC Life Logo"
                         width={44}
                         height={29}
-                        className="object-contain"
-                        style={{
-                            width: '44px',
-                            height: '29px'
-                        }}
+                        className="object-contain w-11 h-7"
                     />
                 </div>
 
@@ -27,7 +24,7 @@ export default function DashboardScreen() {
                         <Badge 
                             variant="info" 
                             size="md"
-                            style={{ width: '98px', height: '24px' }}
+                            className="w-24 h-6"
                         >
                             Non Assisted
                         </Badge>
@@ -46,10 +43,7 @@ export default function DashboardScreen() {
                             width={197}
                             height={96}
                             className="object-contain object-right object-bottom"
-                            style={{
-                                width: '197px',
-                                height: '96px'
-                            }}
+                            style={{ width: '197px', height: '96px' }}
                         />
                     </div>
                 </div>
@@ -63,25 +57,56 @@ export default function DashboardScreen() {
             </div>
 
             <div className="px-4 flex-1">
-                <Card className="space-y-4 p-4">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                        Please check and confirm details
-                    </h3>
-                    <div>
-                        <p className="text-sm text-gray-600">Application No.</p>
-                        <p className="font-medium">1100026323587</p>
+                <Card className="p-6">
+                    <div style={{ height: '24px' }}>
+                        <p className="text-md font-semibold text-gray-900">
+                            Please check and confirm details
+                        </p>
                     </div>
-                    <div>
-                        <p className="text-sm text-gray-600">Mobile No.</p>
-                        <p className="font-medium">+91 8764578235</p>
+                    
+                    <div style={{ height: '23px' }}></div>
+
+                    <div className="border-b border-gray-200" style={{ height: '52px' }}>
+                        <div style={{ height: '16px' }}>
+                            <p className="text-sm text-gray-600">Application No.</p>
+                        </div>
+                        <div style={{ height: '36px' }} className="flex items-center">
+                            <p className="text-base font-medium text-gray-900">1100026323587</p>
+                        </div>
                     </div>
-                    <div>
-                        <p className="text-sm text-gray-600">Preferred Language</p>
-                        <select className="w-full border border-gray-300 rounded-md p-2 text-gray-700">
-                            <option>Select</option>
-                            <option>English</option>
-                            <option>Hindi</option>
-                        </select>
+                    
+                    <div style={{ height: '23px' }}></div>
+                    
+                    <div className="border-b border-gray-200" style={{ height: '52px' }}>
+                        <div style={{ height: '16px' }}>
+                            <p className="text-sm text-gray-600">Mobile No.</p>
+                        </div>
+                        <div style={{ height: '36px' }} className="flex items-center">
+                            <p className="text-base font-medium text-gray-900">+91 8764578235</p>
+                        </div>
+                    </div>
+                    
+                    <div style={{ height: '23px' }}></div>
+                    
+                    <div className="border-b border-gray-200" style={{ height: '52px' }}>
+                        <div style={{ height: '16px' }}>
+                            <p className="text-sm text-gray-600">Preferred Language</p>
+                        </div>
+                        <div style={{ height: '36px' }} className="flex items-center">
+                            <Dropdown
+                                placeholder="Select"
+                                triggerClassName="text-base"
+                                options={[
+                                    { value: "english", label: "English" },
+                                    { value: "hindi", label: "Hindi" },
+                                    { value: "marathi", label: "Marathi" },
+                                    { value: "gujarati", label: "Gujarati" }
+                                ]}
+                                onChange={(value, label) => {
+                                    console.log("Selected:", value, label);
+                                }}
+                            />
+                        </div>
                     </div>
                 </Card>
             </div>

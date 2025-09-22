@@ -7,6 +7,7 @@ export default function useAppFlow() {
   const [showVerificationModal, setShowVerificationModal] = useState(false);
 
   const handleGetStarted = () => {
+    console.log("handleGetStarted called - showing modal");
     setShowVerificationModal(true);
   };
 

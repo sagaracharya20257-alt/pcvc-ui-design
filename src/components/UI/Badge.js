@@ -53,7 +53,6 @@ export default function Badge({
         fontWeight: '500',
         fontSize: '12px',
         lineHeight: '16px',
-        letterSpacing: 'normal',
         textAlign: 'center',
         display: 'flex',
         alignItems: 'center',

@@ -1,4 +1,5 @@
 import Button from "../UI/Button";
+
 export default function WelcomeScreen({ onGetStarted }) {
     return (
         <div className="flex flex-col min-h-screen">
@@ -28,8 +29,8 @@ export default function WelcomeScreen({ onGetStarted }) {
                         className="object-contain w-full relative z-10"
                     />
                     <div
-                        className="absolute bottom-0 left-0 right-0 bg-blue-100 rounded-2xl"
-                        style={{ height: "305px", zIndex: 0 }}
+                        className="absolute bottom-0 left-0 right-0 bg-blue-100 rounded-2xl z-0"
+                        style={{ height: "305px" }}
                     ></div>
                 </div>
 

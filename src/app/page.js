@@ -27,6 +27,8 @@ export default function Page() {
     }
   };
 
+  console.log("Page render - currentScreen:", currentScreen, "showModal:", showVerificationModal);
+  
   return (
     <AppLayout>
       {renderCurrentScreen()}

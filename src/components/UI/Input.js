@@ -5,7 +5,9 @@ export default function Input({
   onChange, 
   type = "text",
   required = false,
-  className = ""
+  className = "",
+  style = {},
+  disabled = false
 }) {
 return (
     <div className="mb-4">
@@ -18,7 +20,9 @@ return (
             type={type}
             value={value}
             placeholder={placeholder}
-            className={`w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent ${className}`}
+            className={`w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent ${className}`}
+            style={style}
+            disabled={disabled}
             readOnly
         />
     </div>
